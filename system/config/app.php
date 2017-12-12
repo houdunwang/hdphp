@@ -70,5 +70,5 @@ return [
     |
     | 请求页面不存或执行_404()函数时调用的视图模板
     */
-    '404'      => 'resource/view/404.php',
+    '_404'      => 'resource/view/404.php',
 ];

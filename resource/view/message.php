@@ -25,7 +25,7 @@
 </nav>
 <!--导航end-->
 <div class="container-fluid">
-	<div style="background: url('{{__ROOT__}}/resource/images/logo.png') no-repeat;background-size: contain;height:80px;margin-top: 60px;"></div>
+	<div style="background: url('{{root_url()}}/resource/images/logo.png') no-repeat;background-size: contain;height:80px;margin-top: 60px;"></div>
 	<div class="alert alert-info clearfix jumbotron" style="padding:30px;margin-top: 50px;">
 		<br/>
 		<div class="col-xs-3">
