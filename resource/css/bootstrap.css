@@ -1,0 +1,35 @@
+input,
+button,
+.btn,
+.alert,
+.form-control {
+  border-radius: 0px !important;
+}
+.nav-tabs li > a {
+  border-radius: 0px !important;
+}
+.panel {
+  border-radius: 0px !important;
+}
+.input-group-addon {
+  border-radius: 0px !important;
+}
+.well {
+  border-radius: 0px !important;
+}
+.img-rounded {
+  border-radius: 0px !important;
+}
+.list-group-item {
+  border-radius: 0px !important;
+}
+@media (min-width: 768px) {
+  box-shadow: none !important;
+}
+.modal-content {
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+.btn {
+  border-radius: 0px !important;
+}

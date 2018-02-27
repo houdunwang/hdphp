@@ -1,0 +1,56 @@
+//前台底部导航菜单样式
+.quickmenu {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  //默认样式
+  .normal {
+    display: flex;
+    color: #337ab7;
+    div.home {
+      width: 50px;
+      text-align: center;
+      display: flex;
+      flex-direction: column-reverse;
+      a {
+        background: #f3f3f3 !important;
+        border-top: solid 1px #dcdcdc;
+        padding: 3px;
+        height: 35px;
+        color: #337ab7;
+        i {
+          font-size: 25px;
+        }
+      }
+    }
+    dl {
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      flex: 1;
+      flex-direction: column-reverse;
+      text-align: center;
+      dt {
+        background: #f3f3f3 !important;
+        border-top: solid 1px #dcdcdc;
+        padding: 3px;
+        height: 35px;
+        line-height: 2em;
+        border-left: solid 1px #dcdcdc;
+        overflow: hidden;
+      }
+      dd {
+        display: flex;
+        flex-direction: column;
+        background: #f3f3f3;
+        border: solid 1px #dcdcdc;
+        border-bottom: none !important;
+        padding: 6px;
+        overflow: hidden;
+      }
+    }
+  }
+}

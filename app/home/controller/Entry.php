@@ -11,6 +11,7 @@
 namespace app\home\controller;
 
 use houdunwang\route\Controller;
+use houdunwang\view\View;
 
 class Entry extends Controller
 {

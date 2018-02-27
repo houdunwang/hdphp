@@ -1,4 +1,5 @@
 <?php
+define('RUNTIME',microtime(true));
 /** .-------------------------------------------------------------------
  * |  Software: [HDCMS framework]
  * |      Site: www.hdcms.com

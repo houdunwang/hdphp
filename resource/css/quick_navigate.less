@@ -1,0 +1,24 @@
+//后台底部快捷导航,注意是后台不是前台
+div.quick_navigate {
+  padding: 3px 6px 2px 6px;
+  background: #F2F2F2;
+  border-top: solid 1px #CCCCCC;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 2000;
+  .btn-group {
+    flex: 1;
+    //菜单按钮组
+    .btn-sm{
+      border-radius: 0px;
+    }
+  }
+  .close_quick_menu {
+    color: #666;
+    cursor: pointer;
+    width:30px;
+  }
+}
