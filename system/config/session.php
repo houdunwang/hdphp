@@ -74,7 +74,7 @@ return [
     */
     'redis'    => [
         'host'     => 'localhost',
-        'port'     => 9312,
+        'port'     => 11211,
         'password' => '',
         'database' => 0,
     ],
