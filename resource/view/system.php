@@ -4,13 +4,10 @@
     <meta charset="utf-8"/>
     <title>HDCMS - 免费开源多站点管理系统</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css?version={{HDCMS_VERSION}}"
-          rel="stylesheet">
-    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version={{HDCMS_VERSION}}"
-          rel="stylesheet">
+    <link href="/resource/hdjs/dist/static/package/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/resource/hdjs/dist/static/package/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/resource/css/hdcms.css?version={{HDCMS_VERSION}}">
     <link rel="stylesheet" href="/resource/hdjs/dist/static/css/hdjs.css?version={{HDCMS_VERSION}}">
     <script>
@@ -38,9 +35,9 @@
             }
         }
     </script>
-    <script src="{{root_url()}}/resource/hdjs/dist/static/requirejs/require.js?version={{HDCMS_VERSION}}"></script>
-    <script src="{{root_url()}}/resource/hdjs/dist/static/requirejs/config.js?version={{HDCMS_VERSION}}"></script>
-    <link href="{{root_url()}}/resource/css/system.css?version={{HDCMS_VERSION}}" rel="stylesheet">
+    <script src="/resource/hdjs/dist/static/requirejs/require.js?version={{HDCMS_VERSION}}"></script>
+    <script src="/resource/hdjs/dist/static/requirejs/config.js?version={{HDCMS_VERSION}}"></script>
+    <link href="/resource/css/system.css?version={{HDCMS_VERSION}}" rel="stylesheet">
     <script>
         require(['hdjs'], function () {
             //为异步请求设置CSRF令牌
@@ -78,8 +75,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="http://bbs.houdunwang.com" target="_blank"><i
-                                        class="fa fa-w fa-forumbee"></i> 论坛讨论</a>
+                            <a href="http://bbs.houdunwang.com" target="_blank">
+                                <i class="fa fa-w fa-forumbee"></i> 论坛讨论
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -200,7 +198,7 @@
             })
         </script>
     </if>
-    <if value="v('config.site.hdcms_update_notice')">
+    <if value="v('config.site.hdcms_update_notice') && \system\Model\User::isSuperUser()">
         <script>
             //检测更新
             require(['hdjs'], function (hdjs) {

@@ -19,6 +19,7 @@ define(['hdjs'], function (hdjs) {
                             url: obj.attr('href'),
                             title: $.trim(obj.text())
                         };
+
                         $.post('?m=quicknavigate&action=controller/site/post&siteid=' + window.system.siteid, data, function (json) {
                             if (json['valid'] == 1) {
                                 hdjs.message('添加菜单成功,系统将刷新页面。', window.system.url, 'success', 1);
@@ -32,7 +33,7 @@ define(['hdjs'], function (hdjs) {
                     before: function (e, context) {
                     },
                     onItem: function (context, e) {
-                        var obj = $(context.context);
+                        var obj = $(context);
                         var data = {
                             url: obj.attr('href')
                         };

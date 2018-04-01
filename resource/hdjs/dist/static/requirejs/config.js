@@ -7,14 +7,14 @@
 //     node_modules: '', base: '/node_modules/hdjs/', uploader: '', filesLists: '', hdjs: ''
 // }, window.hdjs);
 require.config({
-    urlArgs: 'version=1.2.101',
+    urlArgs: 'version=1.2.102',
     baseUrl: window.hdjs.base,
     paths: {
         hdjs: 'dist/static/hdjs',
         css: 'dist/static/requirejs/css.min',
         domReady: 'dist/static/requirejs/domReady',
-        vue: 'https://cdn.bootcss.com/vue/2.5.9/vue',
-        scroll: 'https://cdn.bootcss.com/jquery-scrollTo/2.1.2/jquery.scrollTo.min',
+        vue: 'dist/static/package/vue',
+        scroll: 'dist/static/package/jquery-scrollTo/jquery.scrollTo.min',
         Aliplayer: 'http://g.alicdn.com/de/prismplayer/2.0.1/aliplayer-min',
         //微信JSSDK
         jweixin: 'http://res.wx.qq.com/open/js/jweixin-1.2.0',
@@ -23,20 +23,24 @@ require.config({
         //代码高亮
         prism: 'dist/static/package/prism/prism',
         //剪贴版
-        ZeroClipboard: 'https://cdn.bootcss.com/zeroclipboard/2.3.0/ZeroClipboard.min',
+        ZeroClipboard: 'dist/static/package/ZeroClipboard/ZeroClipboard.min',
         //上传组件
         webuploader: 'dist/static/package/webuploader/dist/webuploader',
-        md5: 'https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min',
-        bootstrap: 'https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min',
-        lodash: 'https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min',
+        md5: 'dist/static/package/md5.min',
+        bootstrap: 'dist/static/package/bootstrap-3.3.7-dist/js/bootstrap.min',
+        lodash: 'dist/static/package/lodash.min',
         //复选框切换
-        bootstrapswitch: 'https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/js/bootstrap-switch.min',
-        select2: 'https://cdn.bootcss.com/select2/4.0.6-rc.1/js/select2.min',
-        bootstrapfilestyle: 'https://cdn.bootcss.com/bootstrap-filestyle/2.1.0/bootstrap-filestyle.min',
-        moment: 'https://cdn.bootcss.com/moment.js/2.14.0/moment.min',
-        'jquery-mousewheel': 'https://cdn.bootcss.com/jquery-mousewheel/3.1.13/jquery.mousewheel.min',
+        bootstrapswitch: 'dist/static/package/bootstrap-switch/bootstrap-switch.min',
+        select2: 'dist/static/package/select2/select2.min',
+        bootstrapfilestyle: 'dist/static/package/bootstrap-filestyle/bootstrap-filestyle.min',
+        moment: 'dist/static/package/moment.min',
+        util: "dist/static/component/util",
+        oss: "dist/static/component/oss",
+        'jquery-mousewheel': 'dist/static/package/jquery-mousewheel/jquery.mousewheel.min',
+        'spark-md5':'dist/static/package/spark-md5/spark-md5.min',
         //markdown编辑器edit.md设置
-        jquery: "https://cdn.bootcss.com/jquery/3.2.1/jquery.min",
+        jquery: "dist/static/package/jquery.min",
+        axios: "dist/static/package/axios.min",
         marked: "dist/static/package/editor.md/lib/marked.min",
         prettify: "dist/static/package/editor.md/lib/prettify.min",
         raphael: "dist/static/package/editor.md/lib/raphael.min",
@@ -44,20 +48,46 @@ require.config({
         flowchart: "dist/static/package/editor.md/lib/flowchart.min",
         jqueryflowchart: "dist/static/package/editor.md/lib/jquery.flowchart.min",
         sequenceDiagram: "dist/static/package/editor.md/lib/sequence-diagram.min",
-        katex: "https://cdn.bootcss.com/KaTeX/0.1.1/katex.min",
-        codemirror: "https://cdn.bootcss.com/codemirror/5.31.0/codemirror",
-        editormd: "dist/static/package/editor.md/lib/../editormd.amd",
-        util: "dist/static/component/util",
-        oss: "dist/static/component/oss",
+        katex: "dist/static/package/katex.min",
+        editormd: "dist/static/package/editor.md/editormd.amd",
+        codemirror: "dist/static/package/codemirror.min",
+        //代码高亮
+        highlight: "dist/static/package/highlight/highlight.min",
+        plupload: "dist/static/package/plupload/plupload.full.min"
     },
     shim: {
+        plupload: {
+            exports: 'plupload'
+        },
+        highlight: {
+            deps: ["css!dist/static/package/highlight/dracula.min.css"]
+        },
+        editormd: {
+            deps: [
+                "flowchart",
+                "sequenceDiagram",
+                "css!dist/static/package/editor.md/css/editormd.min.css",
+                "css!dist/static/package/editor.md/lib/codemirror/codemirror.min.css"
+            ]
+        },
+        sequenceDiagram: {
+            deps: [
+                "raphael"
+            ]
+        },
+        jqueryflowchart: {
+            deps: ['flowchart', 'raphael']
+        },
         hdjs: {
             deps: ['css!dist/static/css/hdjs.css']
         },
         bootstrap: {
             exports: '$',
-            deps: ['jquery', 'css!https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css',
-                'css!https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css']
+            deps: [
+                'jquery',
+                'css!dist/static/package/bootstrap-3.3.7-dist/css/bootstrap.min.css',
+                'css!dist/static/package/font-awesome-4.7.0/css/font-awesome.min.css'
+            ]
         },
         select2: {
             exports: '$',
@@ -65,7 +95,10 @@ require.config({
         },
         bootstrapswitch: {
             exports: '$',
-            deps: ['bootstrap', 'css!https://cdn.bootcss.com/bootstrap-switch/3.3.4/css/bootstrap3/bootstrap-switch.min.css']
+            deps: [
+                'bootstrap',
+                'css!dist/static/package/bootstrap-switch/bootstrap-switch.min.css'
+            ]
         },
         webuploader: {
             deps: ['css!dist/static/package/webuploader/css/webuploader.css']
@@ -75,19 +108,13 @@ require.config({
         },
         ueditor: {
             deps: ['ZeroClipboard', 'dist/static/package/ueditor/ueditor.config']
-        },
-        editormd: {
-            deps: [
-                "css!dist/static/package/editor.md/css/editormd.min.css",
-                "css!dist/static/package/editor.md/lib/codemirror/codemirror.min.css"
-            ]
         }
     },
     waitSeconds: 30
 });
 require([
     'jquery',
-    'https://cdn.bootcss.com/axios/0.17.1/axios.min.js',
+    'axios',
     'lodash',
     'bootstrap'
 ], function ($, axios, _) {

@@ -2,7 +2,7 @@
 define([
     'dist/static/component/message',
     'hdjs',
-    'https://cdn.bootcss.com/axios/0.17.1/axios.min.js',
+    'axios',
     'lodash'
 ], function (Message, hdjs, axios) {
     return function (opt) {

@@ -36,7 +36,7 @@
                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                                 <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;" width="75%">
-                                    &reg; {{v('site.info.name')}} {{date(Y)}}<br/>
+                                    &reg; {{v('site.info.name')}} {{date('Y')}}<br/>
                                     <a href="#" style="color: #ffffff;">
                                         <font color="#ffffff">{{root_url()}}</font>
                                     </a>

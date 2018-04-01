@@ -172,7 +172,7 @@
                 'set', 'addMenu','removeMenu', 'upImage', 'font', 'systemLink'
             ]),
             submit() {
-                hdjs.submit();
+                hdjs.submit({successUrl: 'refresh'});
             },
             //去除vue相关数据用于会员中心展示
             format() {

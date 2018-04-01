@@ -13,7 +13,8 @@ define(["hdjs", "jquery", 'css!dist/static/css/editormd.css'], function (hdjs, $
                 "dist/static/package/editor.md/plugins/goto-line-dialog/goto-line-dialog",
                 "dist/static/package/editor.md/plugins/help-dialog/help-dialog",
                 "dist/static/package/editor.md/plugins/html-entities-dialog/html-entities-dialog",
-                "dist/static/package/editor.md/plugins/preformatted-text-dialog/preformatted-text-dialog"], function (editormd) {
+                "dist/static/package/editor.md/plugins/preformatted-text-dialog/preformatted-text-dialog"
+            ], function (editormd) {
                 options = $.extend({
                     syncScrolling: "single",
                     path: window.hdjs.base + "/dist/static/package/editor.md/lib/",
@@ -49,7 +50,7 @@ define(["hdjs", "jquery", 'css!dist/static/css/editormd.css'], function (hdjs, $
                                     var str = '![](' + v + ')';
                                     cm.replaceSelection(str);
                                 })
-                            },{
+                            }, {
                                 //上传多图
                                 multiple: true,
                             })
@@ -61,7 +62,10 @@ define(["hdjs", "jquery", 'css!dist/static/css/editormd.css'], function (hdjs, $
                         }
                     }
                 }, options);
-                return editormd(elem, options);
+                var md = editormd(elem, options);
+                if ($.isFunction(options.callback)) {
+                    options.callback(md);
+                }
             })
         },
         markdownToHTML: function (elem, options) {
@@ -74,7 +78,7 @@ define(["hdjs", "jquery", 'css!dist/static/css/editormd.css'], function (hdjs, $
                     flowChart: true,  // 默认不解析
                     sequenceDiagram: true,  // 默认不解析
                 }, options);
-                return editormd.markdownToHTML("editormd", {
+                return editormd.markdownToHTML(elem, {
                     htmlDecode: "style,script,iframe",  // you can filter tags decode
                     emoji: true,
                     taskList: true,

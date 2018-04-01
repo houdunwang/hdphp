@@ -1,6 +1,6 @@
 //工具函数
 define([
-    'https://cdn.bootcss.com/spark-md5/3.0.0/spark-md5.min.js'
+    'spark-md5'
 ], function (md5) {
     return {
         //移动端检测

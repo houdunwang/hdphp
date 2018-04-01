@@ -28,7 +28,7 @@ define(['hdjs'], function (hdjs) {
          * 更新站点缓存
          */
         updateSiteCache: function () {
-            hdjs.submit({url: '?s=site/site/updateCache&siteid=' + window.system.siteid, successUrl: ''})
+            hdjs.submit({url: '?s=site/site/updateCache&siteid=' + window.system.siteid, successUrl: 'refresh'})
         },
         /**
          * 获取站点的用户列表
@@ -115,10 +115,12 @@ define(['hdjs'], function (hdjs) {
          * 模块选择
          * @param callback
          * @param mid 已经使用的模块如 1,2,3以逗号分隔
+         * @param string type all 所有模块 addon 扩展模块
          */
-        moduleBrowser: function (callback, mid) {
+        moduleBrowser: function (callback, mid, type) {
+            var type = type ? type : 'all';
             var modalobj = hdjs.modal({
-                content: ['?s=component/module/moduleBrowser&siteid=' + window.system.siteid + '&mid=' + mid],
+                content: ['?s=component/module/moduleBrowser&siteid=' + window.system.siteid + '&mid=' + mid + '&type=' + type],
                 title: '请选择模块',
                 width: 600,
                 show: true,//直接显示
