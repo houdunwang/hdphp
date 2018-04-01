@@ -90,6 +90,7 @@ class Base
         switch ($errno) {
             case E_USER_NOTICE:
             case E_DEPRECATED:
+            case E_USER_DEPRECATED:
                 break;
             case E_NOTICE:
                 if (PHP_SAPI != 'cli' && Config::get('app.debug') == true

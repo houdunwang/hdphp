@@ -1,77 +1,5 @@
 [
     {
-        "name": "alchemy/zippy",
-        "version": "0.4.9",
-        "version_normalized": "0.4.9.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/alchemy-fr/Zippy.git",
-            "reference": "59fbeefb9a249122867ef25e53addfcce31850d7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/alchemy-fr/Zippy/zipball/59fbeefb9a249122867ef25e53addfcce31850d7",
-            "reference": "59fbeefb9a249122867ef25e53addfcce31850d7",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "doctrine/collections": "~1.0",
-            "php": ">=5.5",
-            "symfony/filesystem": "^2.0.5 || ^3.0 || ^4.0",
-            "symfony/polyfill-mbstring": "^1.3",
-            "symfony/process": "^2.1 || ^3.0 || ^4.0"
-        },
-        "require-dev": {
-            "ext-zip": "*",
-            "guzzle/guzzle": "~3.0",
-            "guzzlehttp/guzzle": "^6.0",
-            "phpunit/phpunit": "^4.0 || ^5.0",
-            "symfony/finder": "^2.0.5 || ^3.0 || ^4.0"
-        },
-        "suggest": {
-            "ext-zip": "To use the ZipExtensionAdapter",
-            "guzzle/guzzle": "To use the GuzzleTeleporter with Guzzle 3",
-            "guzzlehttp/guzzle": "To use the GuzzleTeleporter with Guzzle 6"
-        },
-        "time": "2018-02-22T13:58:36+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "0.4.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Alchemy\\Zippy\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Alchemy",
-                "email": "dev.team@alchemy.fr",
-                "homepage": "http://www.alchemy.fr/"
-            }
-        ],
-        "description": "Zippy, the archive manager companion",
-        "keywords": [
-            "bzip",
-            "compression",
-            "tar",
-            "zip"
-        ]
-    },
-    {
         "name": "aliyuncs/oss-sdk-php",
         "version": "v2.3.0",
         "version_normalized": "2.3.0.0",
@@ -173,81 +101,6 @@
         ],
         "description": "BaconQrCode is a QR code generator for PHP.",
         "homepage": "https://github.com/Bacon/BaconQrCode"
-    },
-    {
-        "name": "doctrine/collections",
-        "version": "v1.5.0",
-        "version_normalized": "1.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/doctrine/collections.git",
-            "reference": "a01ee38fcd999f34d9bfbcee59dbda5105449cbf"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/collections/zipball/a01ee38fcd999f34d9bfbcee59dbda5105449cbf",
-            "reference": "a01ee38fcd999f34d9bfbcee59dbda5105449cbf",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "php": "^7.1"
-        },
-        "require-dev": {
-            "doctrine/coding-standard": "~0.1@dev",
-            "phpunit/phpunit": "^5.7"
-        },
-        "time": "2017-07-22T10:37:32+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.3.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Doctrine\\Common\\Collections\\": "lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Roman Borschel",
-                "email": "roman@code-factory.org"
-            },
-            {
-                "name": "Benjamin Eberlei",
-                "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
-            },
-            {
-                "name": "Jonathan Wage",
-                "email": "jonwage@gmail.com"
-            },
-            {
-                "name": "Johannes Schmitt",
-                "email": "schmittjoh@gmail.com"
-            }
-        ],
-        "description": "Collections Abstraction library",
-        "homepage": "http://www.doctrine-project.org",
-        "keywords": [
-            "array",
-            "collections",
-            "iterator"
-        ]
     },
     {
         "name": "doctrine/instantiator",
@@ -1457,17 +1310,17 @@
     },
     {
         "name": "houdunwang/error",
-        "version": "v1.0.22",
-        "version_normalized": "1.0.22.0",
+        "version": "v1.0.23",
+        "version_normalized": "1.0.23.0",
         "source": {
             "type": "git",
             "url": "https://github.com/houdunwang/error.git",
-            "reference": "9cc09643b8f161f5f0e7dd08d57212fdcb546b6d"
+            "reference": "9748527f45b4022f3237816b27b0dd98678e7ae4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/houdunwang/error/zipball/9cc09643b8f161f5f0e7dd08d57212fdcb546b6d",
-            "reference": "9cc09643b8f161f5f0e7dd08d57212fdcb546b6d",
+            "url": "https://api.github.com/repos/houdunwang/error/zipball/9748527f45b4022f3237816b27b0dd98678e7ae4",
+            "reference": "9748527f45b4022f3237816b27b0dd98678e7ae4",
             "shasum": "",
             "mirrors": [
                 {
@@ -1484,7 +1337,7 @@
         "require-dev": {
             "phpunit/phpunit": "^6.1"
         },
-        "time": "2018-02-27T06:28:16+00:00",
+        "time": "2018-03-31T17:13:05+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1570,8 +1423,8 @@
     },
     {
         "name": "houdunwang/framework",
-        "version": "v3.0.146",
-        "version_normalized": "3.0.146.0",
+        "version": "v3.0.147",
+        "version_normalized": "3.0.147.0",
         "source": {
             "type": "git",
             "url": "https://github.com/houdunwang/framework.git",
@@ -3104,17 +2957,17 @@
     },
     {
         "name": "houdunwang/zip",
-        "version": "v1.0.8",
-        "version_normalized": "1.0.8.0",
+        "version": "v1.0.9",
+        "version_normalized": "1.0.9.0",
         "source": {
             "type": "git",
             "url": "https://github.com/houdunwang/zip.git",
-            "reference": "6e32357996bcf0747036cb560d0a53eeb8d27d68"
+            "reference": "37f83bdedfbdf4fa33912fc37bc51d0495d2cfb8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/houdunwang/zip/zipball/6e32357996bcf0747036cb560d0a53eeb8d27d68",
-            "reference": "6e32357996bcf0747036cb560d0a53eeb8d27d68",
+            "url": "https://api.github.com/repos/houdunwang/zip/zipball/37f83bdedfbdf4fa33912fc37bc51d0495d2cfb8",
+            "reference": "37f83bdedfbdf4fa33912fc37bc51d0495d2cfb8",
             "shasum": "",
             "mirrors": [
                 {
@@ -3124,13 +2977,12 @@
             ]
         },
         "require": {
-            "alchemy/zippy": "^0.4.8",
-            "php": ">=5.4.0"
+            "php": ">=5.6.0"
         },
         "require-dev": {
             "phpunit/phpunit": "^6.1"
         },
-        "time": "2017-10-10T12:29:03+00:00",
+        "time": "2018-03-31T17:02:57+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -4819,63 +4671,6 @@
         "homepage": "https://github.com/sebastianbergmann/version"
     },
     {
-        "name": "symfony/filesystem",
-        "version": "v4.0.6",
-        "version_normalized": "4.0.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/filesystem.git",
-            "reference": "5d2d655b2c72fc4d9bf7e9bf14f72a447b940f21"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/filesystem/zipball/5d2d655b2c72fc4d9bf7e9bf14f72a447b940f21",
-            "reference": "5d2d655b2c72fc4d9bf7e9bf14f72a447b940f21",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "php": "^7.1.3"
-        },
-        "time": "2018-02-22T10:50:29+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Filesystem\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Filesystem Component",
-        "homepage": "https://symfony.com"
-    },
-    {
         "name": "symfony/polyfill-mbstring",
         "version": "v1.7.0",
         "version_normalized": "1.7.0.0",
@@ -4941,63 +4736,6 @@
             "portable",
             "shim"
         ]
-    },
-    {
-        "name": "symfony/process",
-        "version": "v4.0.6",
-        "version_normalized": "4.0.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/process.git",
-            "reference": "6ed08502a7c9559da8e60ea343bdbd19c3350b3e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/process/zipball/6ed08502a7c9559da8e60ea343bdbd19c3350b3e",
-            "reference": "6ed08502a7c9559da8e60ea343bdbd19c3350b3e",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "php": "^7.1.3"
-        },
-        "time": "2018-02-19T12:18:43+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Process\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Process Component",
-        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/translation",

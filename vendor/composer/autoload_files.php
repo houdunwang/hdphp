@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     '0f066c7cf996f26fedf8f5e90a916a95' => $vendorDir . '/houdunwang/config/src/helper.php',
     'a1b9718204ff2589da0807dfa6153c7a' => $vendorDir . '/houdunwang/crypt/src/helper.php',
     '5943d84bf0db79d84f3eb0f51461e736' => $vendorDir . '/houdunwang/request/src/helper.php',
@@ -21,6 +20,7 @@ return array(
     '23b17121aacc769b0ceb8bec55b8c5f9' => $vendorDir . '/houdunwang/aliyunsms/src/build/mns-autoloader.php',
     'b11d97b9b970a5b38ef908a59daee669' => $vendorDir . '/houdunwang/cli/src/helper.php',
     '0fdb93813e3129bfd50d293224a2095e' => $vendorDir . '/houdunwang/error/src/helper.php',
+    '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     '252420c3cb244c300529dbbdc1b6f21a' => $vendorDir . '/houdunwang/framework/src/helper.php',
     'efab6aa211b7beef70dc6a46a978f422' => $baseDir . '/system/helper.php',
 );

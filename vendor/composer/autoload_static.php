@@ -4,10 +4,9 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18
+class ComposerStaticInit47548d7c2eed854817bbb578c6c73bcb
 {
     public static $files = array (
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '0f066c7cf996f26fedf8f5e90a916a95' => __DIR__ . '/..' . '/houdunwang/config/src/helper.php',
         'a1b9718204ff2589da0807dfa6153c7a' => __DIR__ . '/..' . '/houdunwang/crypt/src/helper.php',
         '5943d84bf0db79d84f3eb0f51461e736' => __DIR__ . '/..' . '/houdunwang/request/src/helper.php',
@@ -22,6 +21,7 @@ class ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18
         '23b17121aacc769b0ceb8bec55b8c5f9' => __DIR__ . '/..' . '/houdunwang/aliyunsms/src/build/mns-autoloader.php',
         'b11d97b9b970a5b38ef908a59daee669' => __DIR__ . '/..' . '/houdunwang/cli/src/helper.php',
         '0fdb93813e3129bfd50d293224a2095e' => __DIR__ . '/..' . '/houdunwang/error/src/helper.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '252420c3cb244c300529dbbdc1b6f21a' => __DIR__ . '/..' . '/houdunwang/framework/src/helper.php',
         'efab6aa211b7beef70dc6a46a978f422' => __DIR__ . '/../..' . '/system/helper.php',
     );
@@ -107,8 +107,6 @@ class ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\Process\\' => 26,
-            'Symfony\\Component\\Filesystem\\' => 29,
         ),
         'O' => 
         array (
@@ -127,10 +125,6 @@ class ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18
         'C' => 
         array (
             'Carbon\\' => 7,
-        ),
-        'A' => 
-        array (
-            'Alchemy\\Zippy\\' => 14,
         ),
     );
 
@@ -365,14 +359,6 @@ class ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
         ),
-        'Symfony\\Component\\Process\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/process',
-        ),
-        'Symfony\\Component\\Filesystem\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/filesystem',
-        ),
         'OSS\\' => 
         array (
             0 => __DIR__ . '/..' . '/aliyuncs/oss-sdk-php/src/OSS',
@@ -397,10 +383,6 @@ class ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
-        'Alchemy\\Zippy\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/alchemy/zippy/src',
-        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -409,13 +391,6 @@ class ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18
             'Prophecy\\' => 
             array (
                 0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
-            ),
-        ),
-        'D' => 
-        array (
-            'Doctrine\\Common\\Collections\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
         ),
         'B' => 
@@ -1568,10 +1543,10 @@ class ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitfb0d78def7fa369e7b11361d974fcb18::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit47548d7c2eed854817bbb578c6c73bcb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit47548d7c2eed854817bbb578c6c73bcb::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit47548d7c2eed854817bbb578c6c73bcb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit47548d7c2eed854817bbb578c6c73bcb::$classMap;
 
         }, null, ClassLoader::class);
     }
